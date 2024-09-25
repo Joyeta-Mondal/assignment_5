@@ -36,22 +36,70 @@
 </style>
 </head>
 <body class="lexend">
-    <!-- nav -->
-    <div class="backgr-nav">
-        <nav class=" max-w-6xl px-5 mx-auto sticky top-0  py-8 flex justify-between items-center">
-            <a href="index.html" class="text-lg bg-lime px-6 py-2 rounded-lg font-bold">Home</a>
-                <div class="text-center flex items-center gap-3">
-                    <img src="assets/logo.png" class="w-10" alt="">
-                    <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+    <header>
+        <!-- nav -->
+        <div class="bg-bg-nav">
+            <nav class=" max-w-6xl px-5 mx-auto sticky top-0  py-8 flex justify-between items-center">
+                <a href="index.html" class="text-lg bg-lime px-6 py-2 rounded-lg font-bold">Home</a>
+                    <div class="text-center flex items-center gap-3">
+                        <img src="assets/logo.png" class="w-10" alt="">
+                        <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+                    </div>
+                    <div class="flex space-x-4 items-center">
+                        <span id="totalBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
+                            <img src="assets/coin.png" alt="balance-available" class="w-6 inline">
+                            <span> <span id="balanceAvl">10500</span> BDT </span>
+                        </span>
                 </div>
-                <div class="flex space-x-4 items-center">
-                    <span id="totalBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
-                        <img src="assets/coin.png" alt="balance-available" class="w-6 inline">
-                        <span> <span id="balanceAvl">10500</span> BDT </span>
-                    </span>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- FAQ  -->
+        <div class=" max-w-6xl px-5 mx-auto mb-20">
+            <!-- Title -->
+            <h2 class="text-3xl font-bold mb-4 my-5 md:my-10">Important FAQ</h2>
+            <div class="space-y-3 mt-5 md:mt-10">
+                <div class="collapse collapse-arrow bg-gray-50 rounded-lg">
+                    <input type="radio" name="myAccordion" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface that represents a web page's structure in memory as a tree of nodes and objects.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-gray-50 rounded-lg">
+                    <input type="radio" name="myAccordion" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>We can select elements using methods like 'getElementById',
+                            'getElementsByClassName', 'querySelector','getElementsByTagName','querySelectorAll','addEventListener' etc.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-gray-50 rounded-lg">
+                    <input type="radio" name="myAccordion" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                        why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a JavaScript technique that allows you to handle events on multiple child elements by attaching a single event listener to a parent element. It's useful because it improves performance, simplifies event handling, and supports dynamic elements.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-gray-50 rounded-lg">
+                    <input type="radio" name="myAccordion" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                        using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>We can manipulate an element's attributes using methods like 'setAttribute',
+                            'removeAttribute','getAttribute', and manipulate styles using the 'style' property.</p>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </main>
+    <footer class="footer footer-center bg-bg-nav h-28 text-base-content p-4 fixed bottom-0">
+        <aside>
+            <p>Copyright © 2024 - All right reserved by Joyeta Mondal.</p>
+        </aside>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

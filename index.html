@@ -20,7 +20,6 @@
                     'card-gray': 'rgba(17, 17, 17, 0.05)',
                     'text-gray':'rgba(17, 17, 17, 0.7)',
                     'text-primary':'rgb(17,17,17)',
-                    'bg-nav': 'rgb(249, 247, 243)',
                     lime : 'rgb(180, 244, 97)',
 
                 }
@@ -33,13 +32,19 @@
         .lexend {
           font-family: "Lexend", sans-serif;
         }
+        #navbar{
+            backdrop-filter: blur(50px);
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
 </style>
 </head>
 <body class="lexend">
-    <header>
+    <header id="navbar">
         <!-- nav start-->
-        <div class="sticky top-0 z-50 shadow">
-            <div class="backgr-nav">
+        <div class="z-50 shadow">
+            <div class="bg-bg-nav">
                 <nav class="max-w-6xl px-5 mx-auto py-8 flex justify-between items-center">
                     <a href="blog.html" target="_blank" class="text-lg bg-lime px-6 py-2 rounded-lg font-bold hover:bg-lime-600 transition-colors">Blog</a>
                     <!-- logo,title -->
@@ -57,7 +62,6 @@
                         </span>
                     </div>
                 </nav>
-            </div>
             <!-- donation and history btn -->
             <div class=" backdrop-blur-xl"></div>
             <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
@@ -72,17 +76,18 @@
     </header>
     <main>
     <!-- donation section -->
-        <div id="donation-container" class="max-w-6xl px-5 mx-auto grid grid-cols-1 gap-6 p-4 mb-10 md:mb-20">
+        <div 
+        id="donation-container" class="max-w-6xl px-5 mx-auto grid grid-cols-1 gap-6 p-4 mb-10 md:mb-20">
             <!-- card1 -->
             <div
-                class=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8 border-gray-300 border rounded-xl">
+                class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8 border-gray-300 border rounded-xl">
                 <div>
                     <img class="w-full" src="assets/noakhali.png" alt="noakhali flood">
                 </div>
                 <div class="text-text-gray space-y-4">
                     <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                         <img src="assets/coin.png" alt="donation amount">
-                        <p><span id="donation-1">8500</span> BDT</p>
+                        <p><span id="donation1">8500</span> BDT</p>
                     </span>
                     <h2 class="text-text-primary font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p>The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation
@@ -105,7 +110,7 @@
                 <div class="text-text-gray space-y-4">
                     <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                         <img src="assets/coin.png" alt="donation amount">
-                        <p><span id="donation-2">890</span> BDT</p>
+                        <p><span id="donation2">890</span> BDT</p>
                     </span>
                     <h2 class="text-text-primary font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss.
@@ -129,7 +134,7 @@
                 <div class="text-text-gray space-y-4">
                     <span class="flex items-center gap-2 bg-card-gray px-4 py-2 rounded-xl w-40">
                         <img src="assets/coin.png" alt="donation amount">
-                        <p><span id="donation-3">3010</span> BDT</p>
+                        <p><span id="donation3">3010</span> BDT</p>
                     </span>
                     <h2 class="text-text-primary font-bold text-xl">Aid for Injured in the Quota Movement</h2>
                     <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many
@@ -148,9 +153,29 @@
         </div>
 
     <!-- history section -->
+        <div id="history-container historyLt" class=" max-w-6xl px-5 mx-auto hidden p-4">
+            <ul id="historyLt" class="list-none"></ul>
+        </div>
+    <!-- Modal -->
+        <dialog id="donationModal" class="modal">
+            <div class="modal-box  max-w-2xl">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-2xl font-bold text-center">Congrates!</h2>
+                    <img src="assets/coin.png" class="w-10 my-6" alt="donation">
+                    <p class="">You have donated to human kind</p>
+                    <h2 class="text-2xl font-bold text-center mt-4 ">Successfully</h2>
+                    <div class="modalActions">
+                        <form method="dialog" class="flex justify-center items-center">
+                            <!-- the modal will be closed if there is a button in the form-->
+                            <button class="btn">Close confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </dialog>
     </main>
-    <footer>
-
+    <footer class="footer footer-center bg-bg-nav h-28 text-base-content p-4">
+        <aside><p>Copyright © 2024 - All right reserved by Joyeta Mondal.</p></aside>
     </footer>
     <script src="js/script.js"></script>
 </body>
