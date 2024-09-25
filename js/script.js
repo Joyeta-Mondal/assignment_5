@@ -11,23 +11,35 @@ document.getElementById('history-Btn').addEventListener('click', () => {
     toggleBtnAct('history-Btn', 'donation-btn');
 });
 // togglebar
-function toggleBtnAct(activeId, inactiveId) {
-    document.getElementById(activeId).classList.remove('border-gray-500');
-    document.getElementById(activeId).classList.add('bg-lime', 'text-text-primary', 'border-lime');
-    document.getElementById(inactiveId).classList.remove('bg-lime', 'text-text-primary', 'border-lime');
-    document.getElementById(inactiveId).classList.add('border', 'border-gray-500', 'text-black');
-}
-function addToAmtHistory(donationAmt, cartId) {
+function selectOption(selectedOption) {
+    const options = document.querySelectorAll('.option');
+    options.forEach((option, index) => {
+      if (index === selectedOption - 1) {
+        option.classList.add('bg-lime', 'text-text-primary', 'border-lime');
+        option.classList.remove('border', 'border-gray-500');
+      } else {
+        option.classList.add('border', 'border-gray-500');
+        option.classList.remove('bg-lime', 'text-text-primary', 'border-lime');
+      }
+    });
+  }
+// function toggleBtnAct(activeId, inactiveId) {
+//     document.getElementById(activeId).classList.remove('border', 'border-gray-500');
+//     document.getElementById(activeId).classList.add('bg-lime', 'text-text-primary', 'border-lime');
+//     document.getElementById(inactiveId).classList.remove('bg-lime', 'text-text-primary', 'border-lime');
+//     document.getElementById(inactiveId).classList.add('border', 'border-gray-500');
+// }
+function addToAmtHistory(donationAmt, cardId) {
     const historyLt = document.getElementById('historyLt');
     const timestamp = new Date().toString();
     let message;
 
 //donation msg as per card id
-    if (cartId === 1) {
+    if (cardId === 1) {
         message = 'Flood Relief in Noakhali, Bangladesh';
-    } else if (cartId === 2) {
+    } else if (cardId === 2) {
         message = 'Flood Relief in Feni, Bangladesh';
-    } else if (cartId === 3) {
+    } else if (cardId === 3) {
         message = 'Aid for Injured in the Quota Movement, Bangladesh';
     }
 
@@ -46,6 +58,7 @@ function addToAmtHistory(donationAmt, cartId) {
     // insertion of the transaction card as HTML into the history section
     historyLt.insertAdjacentHTML('beforeend', transactionCard);
 }
+
 // donation activities
 function donation(cardId){
     const donationIn = document.getElementById(`donationIn${cardId}`);

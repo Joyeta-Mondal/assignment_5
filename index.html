@@ -64,11 +64,11 @@
                 </nav>
             <!-- donation and history btn -->
             <div class=" backdrop-blur-xl"></div>
-            <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
-                <button id="donation-btn"
-                    class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
+            <div id="options" class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
+                <button  id="donation-btn"
+                    class="option px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
                 <button id="history-Btn"
-                    class="px-4 py-2  text-text-primary border border-gray-500 rounded-md font-bold">History</button>
+                    class="option px-4 py-2  text-text-primary border border-gray-500 rounded-md font-bold">History</button>
             </div>
         </div>
     </div>
@@ -153,7 +153,7 @@
         </div>
 
     <!-- history section -->
-        <div id="history-container historyLt" class=" max-w-6xl px-5 mx-auto hidden p-4">
+        <div onclick="addToAmtHistory()" id="history-container historyLt" class=" max-w-6xl px-5 mx-auto hidden p-4">
             <ul id="historyLt" class="list-none"></ul>
         </div>
     <!-- Modal -->
