@@ -35,7 +35,47 @@
         }
 </style>
 </head>
-<body>
+<body class="lexend">
+    <header>
+        <!-- nav start-->
+        <div class="sticky top-0 z-50 shadow">
+            <div class="backgr-nav">
+                <nav class="max-w-6xl px-5 mx-auto py-8 flex justify-between items-center">
+                    <a href="blog.html" target="_blank" class="text-lg bg-lime px-6 py-2 rounded-lg font-bold hover:bg-lime-600 transition-colors">Blog</a>
+                    <!-- logo,title -->
+                    <div class="text-center flex items-center gap-3">
+                        <img src="assets/logo.png" alt="logo" class="w-10">
+                        <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+                    </div>
+                    <!-- balance -->
+                    <div class="flex space-x-4 items-center">
+                        <span id="totalBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
+                            <img src="assets/coin.png" alt="balance" class="w-6 inline">
+                            <span>
+                                <span id="balanceAvl">6500</span> BDT
+                            </span>
+                        </span>
+                    </div>
+                </nav>
+            </div>
+            <!-- donation and history btn -->
+            <div class=" backdrop-blur-xl"></div>
+            <div class="max-w-6xl px-5 mx-auto flex justify-center space-x-4 py-10 mb-8 ">
+                <button id="donation-btn"
+                    class="px-4 py-2 bg-lime text-text-primary rounded-md font-bold">Donation</button>
+                <button id="history-Btn"
+                    class="px-4 py-2  text-text-primary border border-gray-500 rounded-md font-bold">History</button>
+            </div>
+        </div>
+    </div>
+    <!-- nav end -->
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

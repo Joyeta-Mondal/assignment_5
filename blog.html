@@ -35,7 +35,23 @@
         }
 </style>
 </head>
-<body>
+<body class="lexend">
+    <!-- nav -->
+    <div class="backgr-nav">
+        <nav class=" max-w-6xl px-5 mx-auto sticky top-0  py-8 flex justify-between items-center">
+            <a href="index.html" class="text-lg bg-lime px-6 py-2 rounded-lg font-bold">Home</a>
+                <div class="text-center flex items-center gap-3">
+                    <img src="assets/logo.png" class="w-10" alt="">
+                    <p class="text-lg font-bold hidden md:block">Donate Bangladesh</p>
+                </div>
+                <div class="flex space-x-4 items-center">
+                    <span id="totalBalance" class="text-lg font-semibold text-text-primary flex gap-2 items-center">
+                        <img src="assets/coin.png" alt="balance-available" class="w-6 inline">
+                        <span> <span id="balanceAvl">10500</span> BDT </span>
+                    </span>
+            </div>
+        </nav>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
