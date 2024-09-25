@@ -1,4 +1,4 @@
-let balance = 60000;
+let balance = 30000;
 document.getElementById('balanceAvl').textContent = balance;
 document.getElementById('donation-btn').addEventListener('click', () => {
     document.getElementById('donation-container').classList.remove('hidden');
@@ -44,4 +44,33 @@ function donation(cardID){
     addToAmtHistory(donationAmt, cardID);
     donationIn.value= '';
     donationModal.showModal();
+}
+function addToAmtHistory(donationAmt, cartNo) {
+    const historyLt = document.getElementById('historyLt');
+    const timestamp = new Date().toString();
+    let message;
+
+//donation msg as per card id
+    if (cartNo === 1) {
+        message = 'Flood Relief in Noakhali, Bangladesh';
+    } else if (cartNo === 2) {
+        message = 'Flood Relief in Feni, Bangladesh';
+    } else if (cartNo === 3) {
+        message = 'Aid for Injured in the Quota Movement, Bangladesh';
+    }
+
+    // transaction card
+    const transactionCard = `
+        <div class="p-4 md:p-8 border-gray-300 border rounded-xl mt-4 md:mt-8">
+            <div class="space-y-3">
+                <h2 class="text-text-primary font-bold text-xl">
+                    <span>${donationAmt}</span> Taka is Donated for <span>${message}</span>
+                </h2>
+                <p class="text-text-gray">Date: <span>${timestamp}</span></p>
+            </div>
+        </div>
+    `;
+
+    // insertion of the transaction card as HTML into the history section
+    historyLt.insertAdjacentHTML('beforeend', transactionCard);
 }
